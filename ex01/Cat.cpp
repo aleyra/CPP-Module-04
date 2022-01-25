@@ -8,6 +8,7 @@ Cat::Cat(){
 
 Cat::Cat(Cat const &src){
 	std::cout << "Construction of Cat by copy" << std::endl;
+	this->brain = new Brain();
 	*this = src;
 }
 
