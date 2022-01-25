@@ -59,6 +59,12 @@ int	main(){
 	}
 
 	std::cout << std::endl;
+
+	Cat t(*n);
+	std::cout << "an idea of another " << t.getType() << " is : ";
+	brain = t.getBrain();
+	std::cout << brain->ideas[1] << std::endl;
+
 	delete n;
 	return (0);
 }
