@@ -33,11 +33,13 @@ int	main(){
 	brain = Array[nb - 1]->getBrain();
 	std::cout << brain->ideas[0] << std::endl;
 
+	for (i = 0; i < size; i++)
+		delete Array[i];
 	std::cout << std::endl;
 
-	Cat	n;
-	std::cout << n.getType() << "'s ideas are : ";
-	brain = n.getBrain();
+	Cat	*n = new Cat();
+	std::cout << n->getType() << "'s ideas are : ";
+	brain = n->getBrain();
 	brain->ideas[0] = "eat";
 	brain->ideas[1] = "ask for hug";
 	brain->ideas[2] = "play";
@@ -47,7 +49,10 @@ int	main(){
 	std::cout << "and other things" << std::endl;
 
 	{
-		Cat tmp = n;
+		std::cout << "test" << std::endl;
+		Cat tmp;
+
+		tmp = *n;
 
 		std::cout << "an idea of another " << tmp.getType() << " is : ";
 		brain = tmp.getBrain();
@@ -55,14 +60,6 @@ int	main(){
 	}
 
 	std::cout << std::endl;
-
-	// Cat o = Cat(n);
-	// std::cout << "an idea of another " << o.getType() << " is : ";
-	// brain = o.getBrain();
-	// std::cout << brain->ideas[0] << std::endl;
-
-	for (i = 0; i < size; i++)
-		delete Array[i];
-
+	delete n;
 	return (0);
 }

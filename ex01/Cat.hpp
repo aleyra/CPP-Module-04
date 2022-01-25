@@ -14,6 +14,7 @@ public:
 
 	virtual void	makeSound() const;
 	virtual Brain	*getBrain() const;
+	virtual Animal &operator=(Animal const &src);
 
 protected:
 

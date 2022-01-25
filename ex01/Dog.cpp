@@ -8,7 +8,7 @@ Dog::Dog(){
 
 Dog::Dog(Dog const &src){
 	std::cout << "Construction of Dog by copy" << std::endl;
-	this->type = src.type;
+	*this = src;
 }
 
 Dog::~Dog(){
@@ -18,6 +18,7 @@ Dog::~Dog(){
 
 Dog	&Dog::operator=(Dog const &src){
 	this->type = src.type;
+	*(this->brain) = *(src.getBrain());
 	return (*this);
 }
 
@@ -27,4 +28,10 @@ void	Dog::makeSound() const{
 
 Brain*	Dog::getBrain() const{
 	return (this->brain);
+}
+
+Animal	&Dog::operator=(Animal const &src){
+	this->type = src.getType();
+	*(this->brain) = *(src.getBrain());
+	return (*this);
 }

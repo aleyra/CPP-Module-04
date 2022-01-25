@@ -7,7 +7,7 @@ Animal::Animal(){
 
 Animal::Animal(Animal const &src){
 	std::cout << "Construction of Animal by copy" << std::endl;
-	this->type = src.type;
+	*this = src;
 }
 
 Animal::~Animal(){
