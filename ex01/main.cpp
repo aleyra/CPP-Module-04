@@ -49,7 +49,6 @@ int	main(){
 	std::cout << "and other things" << std::endl;
 
 	{
-		std::cout << "test" << std::endl;
 		Cat tmp;
 
 		tmp = *n;
