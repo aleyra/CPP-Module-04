@@ -16,7 +16,15 @@ Brain::~Brain(){
 Brain	&Brain::operator=(Brain const &src){
 
 	for(int i = 0; i < 100 ; i++){
-		this->ideas[i] = src.ideas[i];
+		this->_ideas[i] = src._ideas[i];
 	}
 	return (*this);
+}
+
+std::string	*Brain::getIdeas(){
+	return (this->_ideas);
+}
+
+void		Brain::setIdeas(unsigned int i, std::string str){
+	this->_ideas[i] = str;
 }

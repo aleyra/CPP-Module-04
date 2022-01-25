@@ -30,9 +30,3 @@ void	Cat::makeSound() const{
 Brain*	Cat::getBrain() const{
 	return (this->brain);
 }
-
-Animal	&Cat::operator=(Animal const &src){
-	this->type = src.getType();
-	*(this->brain) = *(src.getBrain());
-	return (*this);
-}

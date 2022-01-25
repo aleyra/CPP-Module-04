@@ -30,9 +30,3 @@ void	Dog::makeSound() const{
 Brain*	Dog::getBrain() const{
 	return (this->brain);
 }
-
-Animal	&Dog::operator=(Animal const &src){
-	this->type = src.getType();
-	*(this->brain) = *(src.getBrain());
-	return (*this);
-}

@@ -6,17 +6,19 @@
 
 class Brain{
 public:
-	std::string	ideas[100];
-
 	Brain();
 	Brain(Brain const &src);
 	virtual ~Brain();
 
 	Brain &operator=(Brain const &src);
 
+	virtual std::string	*getIdeas();
+	virtual void		setIdeas(unsigned int i, std::string str);
+
 protected:
 
 private:
+	std::string	_ideas[100];
 
 };
 

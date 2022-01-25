@@ -20,18 +20,18 @@ int	main(){
 
 	std::cout << Array[0]->getType() << "'s ideas are : ";
 	brain = Array[0]->getBrain();
-	brain->ideas[0] = "eat";
-	brain->ideas[1] = "ask for hug";
-	brain->ideas[2] = "play";
-	brain->ideas[3] = "sleep";
+	brain->setIdeas(0, "eat");
+	brain->setIdeas(1, "ask for hug");
+	brain->setIdeas(2, "play");
+	brain->setIdeas(3, "sleep");
 	for (int j = 0; j < 4; j++)
-		std::cout << brain->ideas[j] << ", ";
+		std::cout << brain->getIdeas()[j] << ", ";
 	std::cout << "and other things" << std::endl;
 
 	*(Array[nb - 1]) = *(Array[0]);
 	std::cout << "an idea of another " << Array[nb - 1]->getType() << " is : ";
 	brain = Array[nb - 1]->getBrain();
-	std::cout << brain->ideas[0] << std::endl;
+	std::cout << brain->getIdeas()[0] << std::endl;
 
 	for (i = 0; i < size; i++)
 		delete Array[i];
@@ -40,12 +40,12 @@ int	main(){
 	Cat	*n = new Cat();
 	std::cout << n->getType() << "'s ideas are : ";
 	brain = n->getBrain();
-	brain->ideas[0] = "eat";
-	brain->ideas[1] = "ask for hug";
-	brain->ideas[2] = "play";
-	brain->ideas[3] = "sleep";
+	brain->setIdeas(0, "eat");
+	brain->setIdeas(1, "ask for hug");
+	brain->setIdeas(2, "play");
+	brain->setIdeas(3, "sleep");
 	for (int j = 0; j < 4; j++)
-		std::cout << brain->ideas[j] << ", ";
+		std::cout << brain->getIdeas()[j] << ", ";
 	std::cout << "and other things" << std::endl;
 
 	{
@@ -55,7 +55,7 @@ int	main(){
 
 		std::cout << "an idea of another " << tmp.getType() << " is : ";
 		brain = tmp.getBrain();
-		std::cout << brain->ideas[0] << std::endl;
+		std::cout << brain->getIdeas()[0] << std::endl;
 	}
 
 	std::cout << std::endl;
@@ -63,7 +63,7 @@ int	main(){
 	Cat t(*n);
 	std::cout << "an idea of another " << t.getType() << " is : ";
 	brain = t.getBrain();
-	std::cout << brain->ideas[1] << std::endl;
+	std::cout << brain->getIdeas()[1] << std::endl;
 
 	delete n;
 	return (0);
