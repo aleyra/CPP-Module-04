@@ -9,6 +9,9 @@ Cat::Cat(){
 Cat::Cat(Cat const &src){
 	std::cout << "Construction of Cat by copy" << std::endl;
 	this->type = src.type;
+	this->brain = new Brain();
+	for (int i = 0; i < 100; i++)
+		this->brain->ideas[i] = src.brain->ideas[i];
 }
 
 Cat::~Cat(){
