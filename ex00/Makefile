@@ -1,15 +1,15 @@
 .PHONY: all clean fclean re
 # Name of file
-NAME		=	clap
+NAME		=	animals
 
 # Name directory
 PATH_OBJ	=	objs
 
 #List of sources
-SRCS		=	main.cpp ClapTrap.cpp
+SRCS		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS		=	$(addprefix $(PATH_OBJ)/, $(SRCS:.cpp=.o))
-INCS		=	ClapTrap.hpp
+INCS		=	Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 
 # Commands of compilation
 COMP		=	clang++
