@@ -11,12 +11,13 @@ public:
 
 	MateriaSource	&operator=(MateriaSource const &src);
 
-	virtual void		learnMateria(AMateria*);
+	virtual void		learnMateria(AMateria* m);
 	virtual AMateria*	createMateria(std::string const & type);
 
 protected:
 
 private:
+	AMateria	*_source[4];
 
 };
 
