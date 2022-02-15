@@ -12,7 +12,7 @@ OBJS		=	$(addprefix $(PATH_OBJ)/, $(SRCS:.cpp=.o))
 INCS		=	Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
 
 # Commands of compilation
-COMP		=	clang++
+COMP		=	c++
 COMP_FLAG	=	-Wall -Werror -Wextra
 
 # Others Command

@@ -12,7 +12,7 @@ OBJS		=	$(addprefix $(PATH_OBJ)/, $(SRCS:.cpp=.o))
 INCS		=	AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 
 # Commands of compilation
-COMP		=	clang++
+COMP		=	c++
 COMP_FLAG	=	-Wall -Werror -Wextra
 
 # Others Command
