@@ -13,12 +13,12 @@ public:
 	Dog	&operator=(Dog const &src);
 
 	virtual void	makeSound() const;
-	virtual Brain	*getBrain() const;
+	Brain	*getBrain() const;
 
 protected:
 
 private:
-	Brain*	brain;
+	Brain*	_brain;
 
 };
 

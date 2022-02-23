@@ -6,7 +6,6 @@
 
 class Character:public ICharacter{
 public:
-	Character();
 	Character(Character const &src);
 	Character(std::string name);
 	virtual ~Character();
@@ -23,6 +22,8 @@ public:
 protected:
 
 private:
+	Character();
+
 	std::string _name;
 	AMateria	*_inventory[4];
 

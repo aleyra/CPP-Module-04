@@ -18,7 +18,7 @@ public:
 protected:
 
 private:
-	Brain*	brain;
+	Brain*	_brain;
 
 };
 

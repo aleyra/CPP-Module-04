@@ -7,15 +7,14 @@ int	main(){
 	const Animal*		pochi = new Dog();
 	const Animal*		mike = new Cat();
 	
-	const WrongAnimal*	wmeta = new WrongCat();
-	const WrongCat*		wmike = new WrongCat();
-	
 	std::cout << pochi->getType() << " " << std::endl;
 	std::cout << mike->getType() << " " << std::endl;
 	mike->makeSound(); //will output the cat sound!
 	pochi->makeSound();
 	meta->makeSound();
 
+	const WrongAnimal*	wmeta = new WrongCat();
+	const WrongCat*		wmike = new WrongCat();
 	std::cout << wmike->getType() << " " << std::endl;
 	wmike->makeSound();
 	wmeta->makeSound();

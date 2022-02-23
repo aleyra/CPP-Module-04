@@ -18,21 +18,6 @@ int	main(){
 		std::cout << Array[i]->getType() << std::endl;
 	std::cout << std::endl;
 
-	std::cout << Array[0]->getType() << "'s ideas are : ";
-	brain = Array[0]->getBrain();
-	brain->setIdeas(0, "eat");
-	brain->setIdeas(1, "ask for hug");
-	brain->setIdeas(2, "play");
-	brain->setIdeas(3, "sleep");
-	for (int j = 0; j < 4; j++)
-		std::cout << brain->getIdeas()[j] << ", ";
-	std::cout << "and other things" << std::endl;
-
-	*(Array[nb - 1]) = *(Array[0]);
-	std::cout << "an idea of another " << Array[nb - 1]->getType() << " is : ";
-	brain = Array[nb - 1]->getBrain();
-	std::cout << brain->getIdeas()[0] << std::endl;
-
 	for (i = 0; i < size; i++)
 		delete Array[i];
 	std::cout << std::endl;

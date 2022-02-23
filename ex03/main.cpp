@@ -11,6 +11,7 @@ int	main(){
 	ICharacter* me = new Character("me");
 	
 	AMateria* tmp;
+	// std::cout << "tests\n";//
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	AMateria *t1;

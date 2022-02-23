@@ -20,6 +20,7 @@ AMateria	&AMateria::operator=(AMateria const &src){
 }
 
 std::string const &	AMateria::getType() const{
+			// std::cout << "tests 3\n";//
 	return (this->_type);
 }
 

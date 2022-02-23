@@ -28,3 +28,4 @@ std::string	*Brain::getIdeas(){
 void		Brain::setIdeas(unsigned int i, std::string str){
 	this->_ideas[i] = str;
 }
+

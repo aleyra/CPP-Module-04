@@ -16,6 +16,7 @@ Cure	&Cure::operator=(Cure const &src){
 }
 
 AMateria* 	Cure::clone() const{
+		// std::cout << "tests cure\n";//
 	AMateria *ncure = new Cure(*this);
 	return(ncure);
 }

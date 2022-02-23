@@ -1,6 +1,9 @@
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource(){
+	for(int i = 0; i < 4; i++){
+		this->_source[i] = NULL;
+	}
 }
 
 MateriaSource::MateriaSource(MateriaSource const &src){
@@ -28,16 +31,19 @@ MateriaSource	&MateriaSource::operator=(MateriaSource const &src){
 
 void	MateriaSource::learnMateria(AMateria* m){
 	for(int i = 0; i < 4; i++){
+	// std::cout << "tests 4\n";//
 		if (!this->_source[i]){
 			this->_source[i] = m;
-			break;
+			return ;
 		}
 	}
 }
 
 AMateria*	MateriaSource::createMateria(std::string const & type){
 	for(int i = 0; i < 4; i++){
+		// std::cout << "tests 1 " << type << " " <<this->_source[i]->getType()<< "\n";//
 		if (this->_source[i]->getType() == type){
+			// std::cout << this->_source[i]->getType() << std::endl;//
 			return(this->_source[i]->clone());
 		}
 	}

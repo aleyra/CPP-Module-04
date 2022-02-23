@@ -3,7 +3,7 @@
 Cat::Cat(){
 	std::cout << "Construction of Cat" << std::endl;
 	this->type = "Cat";
-	this->brain = new Brain();
+	this->_brain = new Brain();
 }
 
 Cat::Cat(Cat const &src){
@@ -13,7 +13,7 @@ Cat::Cat(Cat const &src){
 
 Cat::~Cat(){
 	std::cout << "Destruction of Cat" << std::endl;
-	delete this->brain;
+	delete this->_brain;
 }
 
 Cat	&Cat::operator=(Cat const &src){
@@ -26,5 +26,5 @@ void	Cat::makeSound() const{
 }
 
 Brain*	Cat::getBrain() const{
-	return (this->brain);
+	return (this->_brain);
 }

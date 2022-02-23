@@ -3,7 +3,7 @@
 Dog::Dog(){
 	std::cout << "Construction of Dog" << std::endl;
 	this->type = "Dog";
-	this->brain = new Brain();
+	this->_brain = new Brain();
 }
 
 Dog::Dog(Dog const &src){
@@ -13,7 +13,7 @@ Dog::Dog(Dog const &src){
 
 Dog::~Dog(){
 	std::cout << "Destruction of Dog" << std::endl;
-	delete this->brain;
+	delete this->_brain;
 }
 
 Dog	&Dog::operator=(Dog const &src){
@@ -26,5 +26,5 @@ void	Dog::makeSound() const{
 }
 
 Brain*	Dog::getBrain() const{
-	return (this->brain);
+	return (this->_brain);
 }

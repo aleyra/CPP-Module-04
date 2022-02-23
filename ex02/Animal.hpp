@@ -13,9 +13,8 @@ public:
 
 	Animal	&operator=(Animal const &src);
 
-	virtual const std::string	&getType() const = 0;
+	virtual const std::string	&getType() const;
 	virtual void		makeSound() const = 0;
-	virtual Brain	*getBrain() const = 0;
 
 protected:
 	std::string	type;
